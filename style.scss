@@ -1,0 +1,140 @@
+$sedan: #E28625;
+$suv: #006971;
+$luxury: #004140;
+
+body {
+    
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+p {
+    line-height: 25px;
+    font-size: 0.9375rem;
+    color: #fff;
+}
+
+button {
+    padding: 15px 30px;
+    border-radius: 30px;
+    margin-top: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    border: none;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    
+    .car {
+        padding: 50px;
+    }
+
+    .car:first-child {
+        border-radius: 10px 10px 0 0;
+    }
+    .car:last-child {
+        border-radius: 0 0 10px 10px ;
+    }
+
+    .sedan {
+        background-color: $sedan;
+
+        button {
+            color: $sedan;
+            // border: 3px solid $sedan;
+        }
+    }
+
+    .suv {
+        background-color: $suv;
+
+        button {
+            color: $suv;
+        }
+    }
+
+    .luxury {
+        background-color: $luxury;
+
+        button {
+            color: $luxury;
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    button {
+        margin-top: 60px;
+    }
+
+    #main {
+        
+        display: flex;
+        flex-direction: row;
+        width: 55%;
+        margin: 250px auto 0;
+
+        .car:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+        
+        .car:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        .car {
+            button:hover {
+                border: 3px solid #fff;
+                color: #fff;
+            }
+        }
+
+        .sedan {
+            button {
+                border: 3px solid $sedan;
+            }
+            
+            button:hover {
+                background-color: $sedan;
+            }
+        }
+
+        .suv {
+            button {
+                border: 3px solid $suv;
+            }
+
+            button:hover {
+                background-color: $suv;
+            }
+        }
+
+        .luxury {
+            button {
+                border: 3px solid $luxury;
+            }
+
+            button:hover {
+                background-color: $luxury;
+            } 
+        }
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        margin: auto;
+    }
+}
